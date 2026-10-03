@@ -3,11 +3,13 @@
 Portfolio site for Arabella Hibbert-Corkhill. Plain HTML/CSS/JS, no build step.
 
 ```
-index.html          Home: hero, featured work (iPhone mockups), speaking, career, parallax portfolio
+index.html          Home: hero, logo marquee, case studies (iPhones), speaking, career, parallax portfolio
 resume.html         Resume (served at /resume); "Save as PDF" uses print styles
 css/style.css       All styles for both pages
 js/main.js          Mobile menu, lazy YouTube player, parallax, print button
-assets/img/         Photos, lecture slide, favicon
+assets/img/         Photos, lecture slide, favicon set
+assets/logos/       Client logos for the marquee and project cards
+assets/work/        Your campaign screenshots for the iPhones (see below)
 vercel.json         Clean URLs (/resume) and asset caching
 ```
 
@@ -23,17 +25,25 @@ vercel.json         Clean URLs (/resume) and asset caching
 
 Every push to `main` redeploys automatically.
 
-## Swapping in real campaign screenshots
+## Adding your campaign images to the iPhones
 
-Each iPhone mockup has a designed cover. To show a real post instead, save a portrait screenshot
-(ideally 1170×2532) to `assets/work/` and add this line inside that phone's `.iphone__screen` div:
+No code changes needed. Save portrait screenshots (ideally 1170×2532, JPG) into `assets/work/` with these exact names
+and they appear inside the phones automatically, replacing the designed covers:
 
-```html
-<img class="iphone__shot" src="/assets/work/spurs-away.jpg" alt="">
-```
+| Case study          | Left phone                 | Right phone                |
+|---------------------|----------------------------|----------------------------|
+| adidas Runners      | `adidas-runners-1.jpg`     | `adidas-runners-2.jpg`     |
+| NFL UK&IRE          | `nfl-uk-ire-1.jpg`         | `nfl-uk-ire-2.jpg`         |
+| Tottenham Hotspur   | `tottenham-hotspur-1.jpg`  | `tottenham-hotspur-2.jpg`  |
+| Volleyball World    | `volleyball-world-1.jpg`   | `volleyball-world-2.jpg`   |
 
-It covers both the designed cover and the Reel overlay; only the status bar and dynamic island stay on top,
-so a straight screenshot of the post (with Instagram's own UI) drops in cleanly.
+A full-screen screenshot of the post (with Instagram/TikTok's own UI) drops in cleanly; the phone's status bar and
+dynamic island stay on top.
+
+## Fonts
+
+The type pairing lives in two lines at the top of `css/style.css` (`--font-display` and `--font-body`).
+To switch to a different Google Fonts pairing, update those two lines and the Google Fonts `<link>` in both HTML files.
 
 ## Custom analytics events
 

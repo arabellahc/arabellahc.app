@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0047ab"/><text x="32" y="43" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="900" font-size="26" fill="#fff" letter-spacing="-1">AHC</text><circle cx="52" cy="12" r="5" fill="#ff3d7f"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><clipPath id="r"><rect width="64" height="64" rx="14"/></clipPath></defs>
+  <g clip-path="url(#r)">
+    <rect width="64" height="64" fill="#0b1f44"/>
+    <g fill="#ff3d7f">
+      <rect x="50" y="0" width="7" height="8"/><rect x="57" y="8" width="7" height="8"/>
+      <rect x="50" y="16" width="7" height="8"/><rect x="57" y="24" width="7" height="8"/>
+      <rect x="50" y="32" width="7" height="8"/><rect x="57" y="40" width="7" height="8"/>
+      <rect x="50" y="48" width="7" height="8"/><rect x="57" y="56" width="7" height="8"/>
+    </g>
+    <g fill="#ffffff">
+      <rect x="57" y="0" width="7" height="8"/><rect x="50" y="8" width="7" height="8"/>
+      <rect x="57" y="16" width="7" height="8"/><rect x="50" y="24" width="7" height="8"/>
+      <rect x="57" y="32" width="7" height="8"/><rect x="50" y="40" width="7" height="8"/>
+      <rect x="57" y="48" width="7" height="8"/><rect x="50" y="56" width="7" height="8"/>
+    </g>
+    <text x="25" y="43" text-anchor="middle" font-family="Montserrat, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="27" letter-spacing="-1.5" fill="#ffffff">AH</text>
+  </g>
+</svg>
