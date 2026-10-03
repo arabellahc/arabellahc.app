@@ -25,25 +25,20 @@ vercel.json         Clean URLs (/resume) and asset caching
 
 Every push to `main` redeploys automatically.
 
-## Adding your campaign images to the iPhones
+## iPhone images
 
-No code changes needed. Save portrait screenshots (ideally 1170×2532, JPG) into `assets/work/` with these exact names
-and they appear inside the phones automatically, replacing the designed covers:
+Every phone shows a real screenshot from `assets/work/`. To swap one, replace the file with a new portrait
+screenshot of the same name (crop off the phone's own status bar first; the template draws its own 9:41 bar).
 
-| Case study          | Left phone                 | Right phone                |
-|---------------------|----------------------------|----------------------------|
-| adidas Runners      | `adidas-runners-1.jpg`     | `adidas-runners-2.jpg`     |
-| NFL UK&IRE          | `nfl-uk-ire-1.jpg`         | `nfl-uk-ire-2.jpg`         |
-| Tottenham Hotspur   | `tottenham-hotspur-1.jpg`  | `tottenham-hotspur-2.jpg`  |
-| Volleyball World    | `volleyball-world-1.jpg`   | `volleyball-world-2.jpg`   |
+Case studies: `adidas-runners-1/2`, `nfl-uk-ire-1/2`, `tottenham-hotspur-1/2`, `volleyball-world-1/2/3`
+More from the portfolio: `mccoys`, `atp`, `peres-jepchirchir`, `w-series`, `redbreast`, `tangle-teezer`, `sophie-hulme`, `world-athletics`
 
-A full-screen screenshot of the post (with Instagram/TikTok's own UI) drops in cleanly; the phone's status bar and
-dynamic island stay on top.
+The status-bar colour behind each phone's 9:41 is set per phone in `index.html` (`style="--bar:#xxxxxx"`).
 
 ## Fonts
 
-The type pairing lives in two lines at the top of `css/style.css` (`--font-display` and `--font-body`).
-To switch to a different Google Fonts pairing, update those two lines and the Google Fonts `<link>` in both HTML files.
+Three-font system, set at the top of `css/style.css`:
+`--f-italic` Newsreader italic (personality), `--f-display` Schibsted Grotesk (authority), `--f-sys` Montserrat (labels and metadata).
 
 ## Custom analytics events
 
