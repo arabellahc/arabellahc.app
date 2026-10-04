@@ -135,30 +135,30 @@ button.btn::after { display: none; }
    ========================================================================== */
 .site-header {
   position: fixed; inset: 0 var(--checker) auto 0; z-index: 100; height: var(--header-h);
-  background: rgba(247, 244, 239, 0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--rule);
+  background: var(--navy); color: var(--ivory);
 }
 .site-header .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand { display: flex; align-items: baseline; gap: .55rem; text-decoration: none; min-width: 0; }
-.brand__name { font-family: var(--f-display); font-weight: 750; font-size: 1.05rem; letter-spacing: -0.02em; white-space: nowrap; }
-.brand__cjk { font-family: var(--f-cjk); font-size: .95rem; color: var(--cobalt); white-space: nowrap; }
+.brand__name { font-family: var(--f-display); font-weight: 750; font-size: 1.05rem; letter-spacing: -0.02em; white-space: nowrap; color: var(--ivory); }
+.brand__cjk { font-family: var(--f-cjk); font-size: .95rem; color: var(--butter); white-space: nowrap; }
 
 .nav { display: flex; align-items: center; gap: clamp(1rem, 2vw, 1.9rem); }
-.nav a { text-decoration: none; font-family: var(--f-sys); font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
-.nav a:not(.btn):hover, .nav a[aria-current="page"] { color: var(--cobalt); }
-.nav .btn { padding: .7rem 1rem; }
+.nav a { text-decoration: none; font-family: var(--f-sys); font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ivory); }
+.nav a:not(.btn):hover, .nav a[aria-current="page"] { color: var(--butter); }
+.nav .btn { padding: .7rem 1rem; background: var(--butter); border-color: var(--butter); color: var(--navy); }
+.nav .btn:hover { background: var(--ivory); border-color: var(--ivory); color: var(--navy); }
 
 .nav-toggle { display: none; background: none; border: 0; padding: .5rem; margin-right: -.5rem; }
-.nav-toggle span { display: block; width: 24px; height: 1.5px; background: var(--navy); margin: 6px 0; transition: transform .2s, opacity .2s; }
+.nav-toggle span { display: block; width: 24px; height: 1.5px; background: var(--ivory); margin: 6px 0; transition: transform .2s, opacity .2s; }
 
 @media (max-width: 960px) {
   .nav-toggle { display: block; }
   .nav {
     position: fixed; top: var(--header-h); left: 0; right: var(--checker); flex-direction: column; align-items: stretch; gap: 0;
-    padding: .5rem var(--gutter) 1.5rem; background: var(--ivory); border-bottom: 1px solid var(--rule);
+    padding: .5rem var(--gutter) 1.5rem; background: var(--navy); border-top: 1px solid rgba(247,244,239,.14);
     transform: translateY(-110%); visibility: hidden; transition: transform .25s ease, visibility .25s;
   }
-  .nav a:not(.btn) { padding: 1rem 0; border-bottom: 1px solid var(--rule); font-size: .8rem; }
+  .nav a:not(.btn) { padding: 1rem 0; border-bottom: 1px solid rgba(247,244,239,.14); font-size: .8rem; }
   .nav .btn { margin-top: 1.2rem; justify-content: center; padding: 1rem; }
   .nav.is-open { transform: none; visibility: visible; }
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
@@ -175,10 +175,17 @@ button.btn::after { display: none; }
 .hero__meta .live { display: inline-flex; align-items: center; gap: .5rem; }
 .hero__meta .live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--cobalt); box-shadow: 0 0 0 3px rgba(49, 87, 213, .18); }
 .hero__name { font-size: clamp(1.55rem, 0.5rem + 4.7vw, 5rem); font-weight: 800; letter-spacing: -0.045em; line-height: 1; white-space: nowrap; }
+.hero__name .n { white-space: nowrap; }
+@media (max-width: 700px) {
+  .hero__name { white-space: normal; font-size: clamp(2.1rem, 9.6vw, 3rem); line-height: .95; letter-spacing: -0.05em; }
+  .hero__name .n { display: block; }
+  .hero .hero__role { font-size: 1.55rem; }
+}
 
 .hero__grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(2rem, 6vw, 5.5rem); align-items: end; margin-top: clamp(1.5rem, 3vw, 2.25rem); }
-.hero__role { font-family: var(--f-display); font-size: clamp(1.75rem, 1rem + 2.6vw, 3.1rem); font-weight: 650; line-height: 1.06; letter-spacing: -0.035em; max-width: 16ch; }
-.hero__role .it { font-size: 1.08em; }
+/* Role set in the italic serif so the bold sans name stays the loudest thing on the page */
+.hero__role { font-family: var(--f-italic); font-style: italic; font-size: clamp(1.8rem, 1rem + 2.7vw, 3.2rem); font-weight: 400; line-height: 1.08; letter-spacing: -0.02em; max-width: 16ch; color: var(--navy); }
+.hero__role .it { font-size: 1em; }
 .hero__lede { margin-top: 1.75rem; max-width: 34rem; font-size: 1.15rem; line-height: 1.6; color: var(--muted); }
 .hero__lede .hl { color: var(--navy); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2.25rem; }
