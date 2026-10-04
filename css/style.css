@@ -511,3 +511,7 @@ button.btn::after { display: none; }
   .marquee ul.marquee__group { flex-wrap: wrap; justify-content: center; padding-right: 0; }
   .slide-in, .archive__col, .archive__word { transform: none !important; opacity: 1 !important; }
 }
+
+/* Selected work intro: tighten the gap between the intro copy and the first case-study divider */
+.work-intro { padding-bottom: clamp(2.5rem, 5vw, 3.75rem); }
+.work-intro .section-head { margin-bottom: 0; }
