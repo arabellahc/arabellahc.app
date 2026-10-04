@@ -7,7 +7,7 @@
 :root {
   /* Palette: ~70% ivory, 20% ink navy, 8% cobalt, 2% butter */
   --ivory: #F7F4EF;
-  --ivory-deep: #EFEAE1;     /* tint of ivory for alternating sections */
+  --ivory-deep: #FBEFC4;     /* soft butter for alternating sections */
   --navy: #17233A;
   --cobalt: #3157D5;
   --butter: #F2D35E;
@@ -215,8 +215,8 @@ button.btn::after { display: none; }
           mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
 .marquee__track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
 .marquee:hover .marquee__track { animation-play-state: paused; }
-.marquee__group { display: flex; align-items: center; gap: clamp(.9rem, 2.4vw, 1.5rem); padding-right: clamp(3rem, 7vw, 5rem); }
-.marquee__group li:last-child { margin-right: 0; }
+.marquee__group { display: flex; align-items: center; gap: clamp(.9rem, 2.4vw, 1.5rem); }
+.marquee ul.marquee__group { padding-right: clamp(.9rem, 2.4vw, 1.5rem); }
 .logo-tile { flex: none; width: clamp(118px, 13vw, 150px); height: clamp(70px, 7.5vw, 84px); padding: .8rem 1rem; display: flex; align-items: center; justify-content: center; background: var(--white); border: 1px solid var(--rule); }
 .logo-tile img { width: auto; height: auto; max-width: 100%; max-height: clamp(40px, 5vw, 52px); object-fit: contain; }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -378,8 +378,9 @@ button.btn::after { display: none; }
 /* ==========================================================================
    About / career route
    ========================================================================== */
-.about__head h2 { font-size: clamp(2.6rem, 1.2rem + 6.4vw, 7rem); letter-spacing: -0.055em; line-height: .95; max-width: 14ch; }
-.about__head h2 .it { display: block; letter-spacing: -0.03em; }
+.about__head h2 { font-size: clamp(2.6rem, 1.2rem + 6.4vw, 7rem); letter-spacing: -0.055em; line-height: .95; }
+.about__head h2 .line { display: block; }
+.about__head h2 .it { letter-spacing: -0.03em; }
 .route__grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.5fr); gap: clamp(2rem, 6vw, 5.5rem); margin-top: clamp(2.5rem, 6vw, 4.5rem); }
 .route__intro p { color: var(--muted); }
 .route__intro p + p { margin-top: 1rem; }
@@ -393,6 +394,7 @@ button.btn::after { display: none; }
 .stop__city { font-family: var(--f-italic); font-style: italic; font-size: 1.35rem; color: var(--cobalt); text-align: right; }
 .stop--now .stop__city { background: linear-gradient(transparent 60%, var(--butter) 60% 92%, transparent 92%); }
 @media (max-width: 860px) { .route__grid { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .stops { display: none; } }
 @media (max-width: 520px) { .stop { grid-template-columns: 1fr auto; } .stop__years { grid-column: 1 / -1; } }
 
 /* ==========================================================================
@@ -499,6 +501,6 @@ button.btn::after { display: none; }
   .marquee__track { animation: none; width: auto; justify-content: center; }
   .marquee__group[aria-hidden="true"] { display: none; }
   .marquee { -webkit-mask-image: none; mask-image: none; }
-  .marquee__group { flex-wrap: wrap; justify-content: center; padding-right: 0; }
+  .marquee ul.marquee__group { flex-wrap: wrap; justify-content: center; padding-right: 0; }
   .slide-in, .archive__col, .archive__word { transform: none !important; opacity: 1 !important; }
 }
