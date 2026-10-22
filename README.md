@@ -28,12 +28,12 @@ Every push to `main` redeploys automatically.
 ## iPhone images
 
 Every phone shows a real screenshot from `assets/work/`. To swap one, replace the file with a new portrait
-screenshot of the same name (crop off the phone's own status bar first; the template draws its own 9:41 bar).
+screenshot of the same name (crop off the phone's own status bar first; the template draws its own status bar).
 
 Case studies: `adidas-runners-1/2`, `nfl-uk-ire-1/2`, `tottenham-hotspur-1/2`, `volleyball-world-1/2/3`
 More from the portfolio: `mccoys`, `atp`, `peres-jepchirchir`, `w-series`, `redbreast`, `tangle-teezer`, `sophie-hulme`, `world-athletics`
 
-The status-bar colour behind each phone's 9:41 is set per phone in `index.html` (`style="--bar:#xxxxxx"`).
+The status-bar colour behind each phone's status bar is set per phone in `index.html` (`style="--bar:#xxxxxx"`).
 
 ## Fonts
 

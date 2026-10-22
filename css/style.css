@@ -62,7 +62,7 @@ button { font: inherit; cursor: pointer; }
 .on-navy .label { color: var(--on-navy-muted); }
 .on-navy .talk .label { color: var(--butter); }
 
-/* Timestamp eyebrow — the recurring 9:41 motif */
+/* Section eyebrow label */
 .stamp {
   display: flex; align-items: center; gap: .75rem; margin-bottom: 1.4rem;
   font-family: var(--f-sys); font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--navy);
